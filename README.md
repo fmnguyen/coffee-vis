@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Bingo Informatics Style
 =====
 
@@ -39,3 +40,7 @@ Save cookie data so users can easily join after disconnect
 License 
 =====
 [MIT](https://github.com/expressjs/session/blob/master/LICENSE)
+=======
+# coffee-vis
+Animated svg coffee info visualization
+>>>>>>> 42733f6d921ccee49bf82748d952bd5af8fba74a
