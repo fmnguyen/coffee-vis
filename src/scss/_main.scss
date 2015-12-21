@@ -1,0 +1,42 @@
+/* 
+ * Author: Francis Nguyen, www.fmnguyen.com
+ */
+
+@mixin breakpoint($point) {
+	@media only screen and (min-width: $point) {
+		@content;
+	}
+}
+
+@mixin horizontal-center {
+	position: absolute;
+	left: 50%;
+	@include transform(translate(-50%, 0));
+}
+
+@mixin vertical-center {
+	position: absolute; 
+	top: 50%;
+	@include transform(translate(0, -50%));
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+}
+
+/* Clearfix */
+.clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    @extend .clearfix;
+  }
+  &:after {
+    clear: both;
+  }
+}

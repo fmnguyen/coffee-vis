@@ -1,0 +1,25 @@
+{
+  "name": "Coffee-Vis",
+  "version": "0.1.0",
+  "description": "Static webpage infographic showing off coffee",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francis Nguyen <fm.nguyen937@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express-server": "^0.5.1",
+    "grunt-open": "^0.2.3"
+  },
+  "dependencies": {
+  	"matchdep": "^1.0.0"
+  }
+}
