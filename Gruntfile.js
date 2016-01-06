@@ -4,10 +4,10 @@
  */
 'use strict';
 var LIVERELOAD_PORT = 35729;
-/*var lrSnippet = require('connect-livereload')();
+var lrSnippet = require('connect-livereload')();
 var mountFolder = function(connect, dir) {
  return connect.static(require('path').resolve(dir));
-};*/
+};
 
 
 module.exports = function(grunt) {
@@ -153,7 +153,7 @@ module.exports = function(grunt) {
      */
     open: {
       server: {
-        path: 'http://localhost:<%= express.options.port %>'
+        path: 'http://localhost:<%= connect.options.port %>'
       }
     },
 
@@ -172,13 +172,17 @@ module.exports = function(grunt) {
         files: '<%= project.src %>/scss/{,*/}*.{scss,sass}',
         tasks: ['sass:dev', 'cssmin:dev']
       },
-      express: {
-	      files:  [ '**/*.js' ],
+      svjinject: {
+        files: '<%= project.assets %>/img/*.svg',
+        tasks: ['svginject']
+      },
+      /*express: {
+	      //files:  [ '** // *.js' ],
 	      tasks:  [ 'express:dev' ],
 	      options: {
 	        spawn: false 
 	      }
-	    },
+	    },*/
       livereload: {
         options: {
           livereload: LIVERELOAD_PORT
@@ -189,6 +193,20 @@ module.exports = function(grunt) {
           '<%= project.assets %>/js/{,*/}*.js',
           '<%= project.assets %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
+      }
+    },
+
+    /**
+     * Merges all svg files in a folder together
+     * https://github.com/danburzo/grunt-svginjector
+     * Takes all svgs in assets/img and concatenates them together
+     */    
+    svginject: {
+      all : {
+        options: {},
+        files: {
+           '<%= project.assets %>/js/svg-min.js': ['<%= project.assets %>/img/*.svg'],
+        }
       }
     }
 
@@ -202,6 +220,7 @@ module.exports = function(grunt) {
     'sass:dev',
     'cssmin:dev',
     'concat:dev',
+    'svginject',
     'connect:livereload',
     //'express:dev',
     'open',

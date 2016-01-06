@@ -1,22 +1,22 @@
 @font-face {
   font-family: 'Gill-Sans-MT';
-  src: url('Gill-Sans-MT.eot'); /* IE9 Compat Modes */
-  src: url('Gill-Sans-MT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('Gill-Sans-MT.woff') format('woff'), /* Modern Browsers */
-       url('Gill-Sans-MT.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('Gill-Sans-MT.svg#954f9f39591f03addb6e99cb7445c9af') format('svg'); /* Legacy iOS */
+  src: url('../fonts/Gill-Sans-MT.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Gill-Sans-MT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Gill-Sans-MT.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Gill-Sans-MT.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Gill-Sans-MT.svg#954f9f39591f03addb6e99cb7445c9af') format('svg'); /* Legacy iOS */
   font-style:   normal;
   font-weight:  400;
 }
 
 @font-face {
-  font-family: 'Modern-216-Heavy';
-  src: url('modern-216-heavy.eot'); /* IE9 Compat Modes */
-  src: url('modern-216-heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('modern-216-heavy.woff') format('woff'), /* Modern Browsers */
-       url('modern-216-heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('modern-216-heavy.svg#32d823fa7c954282e54e31117f1eb85f') format('svg'); /* Legacy iOS */
-  font-style: normal;
+  font-family: 'Grouch';
+  src: url('../fonts/Grouch-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Grouch-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Grouch-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Grouch-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Grouch-Regular.svg#3a89bb2303b355fde93170665c23f8a6') format('svg'); /* Legacy iOS */
+  font-style:   normal;
   font-weight:  400;
 }
 
@@ -31,10 +31,10 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, li, div, span {
-	font-family: Helvetica, Verdana, sans-serif;
+	font-family: 'Gill-Sans-MT', Helvetica, Verdana, sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	color: white;
+	color: #9C7452;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
@@ -46,20 +46,22 @@ i {
 }
 
 h1 {
-	font-size: 2.5em;
-	font-weight: 700;
-	font-style: normal;
+	font-size: 2.00em;
+	font-family: 'Grouch', serif;
+	color: $darkorange;
 }
 
 h2 {
-	font-style: normal;
-	font-size: 1.5em;
+	font-size: 1.125em;
+	font-family: 'Grouch', serif;
+	color: $green;
 }
 
 p {
-	font-style: normal;
-	font-size: 0.8em;
-	line-height: 1.2em;
+	font-size: 1.125em;
+	line-height: 1.25em;
+	letter-spacing: 0.5px;
+	color: $brown;
 }
 
 strong {
@@ -71,6 +73,5 @@ h3, h4, h5, h6 {
 }
 
 span {
-	font-size: 1.0em;
 	font-weight: 700;
 }
