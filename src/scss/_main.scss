@@ -41,23 +41,47 @@
   }
 }
 
+section {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
 .section-header {
 	text-align: center;
 	padding-bottom: 40px;
 	.section-title {
-		padding-bottom: 15px;
+		padding: 0 15px 15px 15px;
 	}
 	.section-summary {
-		min-width: 320px;
-		@include breakpoint(768px) {width: 500px;}
+		min-width: 300px;
+		@include breakpoint(768px) {width: 500px; min-width: 380px;}
 		@include breakpoint(1200px) {width: 600px;}
-		min-width: 380px;
 		margin: 0 auto;
 	}
 }
 
 .row {
 	padding-bottom: 25px;
+}
+
+#header {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	position: relative;
+	.title {
+		text-align: center;
+		@include center;
+		color: $green;
+		letter-spacing: 2.5px;
+		font-size: 2.25em;
+		opacity: 0.8;
+		@include breakpoint(768px) {font-size: 5.5em;}
+	}
+}
+
+#machines {
+	margin-top: 0;
 }
 
 .row-method {
@@ -124,20 +148,39 @@
 
 .row-number {
 	.number-card {
-		text-align: center;
-		.number {
-			font-family: 'Grouch', serif;
-			font-size: 4em;
-			color: $lightorange;
-		}
-		.number-text {
-			font-size: 2.25em;
-			text-transform: uppercase;
-			color: $lightorange;
+		text-align: left;
+		width: 21%;
+		margin: 0 2%;
+		div {font-family: 'Grouch', serif;}
+		.number-wrapper {
+			position: relative;
+
+			.number {
+				font-size: 3.0em;
+				color: $lightorange;
+				float: left;
+				line-height: 1em;
+			}
+			.number-text {
+				font-size: 1.35em;
+				line-height: 1.05em;
+				text-transform: lowercase;
+				letter-spacing: 2px;
+				color: $lightorange;
+				margin-left: 10px;
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+			}
 		}
 		.number-desc {
-			font-size: 0.875em;
-			color: $darkgreen;
+			font-size: 1.25em;
+			letter-spacing: 0.5px;
+			color: $green;
+			margin-top: 5px;
+		}
+		.number-summary {
+			margin-top: 10px;
 		}
 	}
 }
