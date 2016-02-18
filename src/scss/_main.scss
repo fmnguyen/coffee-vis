@@ -50,9 +50,10 @@ section {
 	text-align: center;
 	padding-bottom: 40px;
 	.section-title {
-		padding: 0 15px 15px 15px;
+		padding: 0 15px 10px 15px;
 	}
 	.section-summary {
+		text-align: left;
 		min-width: 300px;
 		@include breakpoint(768px) {width: 500px; min-width: 380px;}
 		@include breakpoint(1200px) {width: 600px;}
@@ -75,7 +76,6 @@ section {
 		color: $green;
 		letter-spacing: 2.5px;
 		font-size: 2.25em;
-		opacity: 0.8;
 		@include breakpoint(768px) {font-size: 5.5em;}
 	}
 }
@@ -146,6 +146,10 @@ section {
 	}
 }
 
+#coffee-2015 {
+
+}
+
 .row-number {
 	.number-card {
 		text-align: left;
@@ -154,15 +158,18 @@ section {
 		div {font-family: 'Grouch', serif;}
 		.number-wrapper {
 			position: relative;
-
 			.number {
 				font-size: 3.0em;
+				@include breakpoint(768px) {font-size: 2.0em;}
+				@include breakpoint(1200px) {font-size: 3.0em;}
 				color: $lightorange;
 				float: left;
 				line-height: 1em;
 			}
 			.number-text {
 				font-size: 1.35em;
+				@include breakpoint(768px) {font-size: 1.0em;}
+				@include breakpoint(1200px) {font-size: 1.35em;}
 				line-height: 1.05em;
 				text-transform: lowercase;
 				letter-spacing: 2px;
@@ -175,6 +182,8 @@ section {
 		}
 		.number-desc {
 			font-size: 1.25em;
+			@include breakpoint(768px) {font-size: 1.0em;}
+			@include breakpoint(1200px) {font-size: 1.25em;}
 			letter-spacing: 0.5px;
 			color: $green;
 			margin-top: 5px;
